@@ -49,15 +49,15 @@ jobs:
           release_name: Release ${{ github.run_number }}
           draft: false
           prelease: false
-        - name: Upload Realese Asset
-          id: u;oad_release_asset
-          uses: actions/upload-release-asset@v1
-          env:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          with:
-            upload_url: ${{ steps.create_release.outputs.upload_url }}
-            asset_path: ./lr1.zip
-            asset_name: lr1.zip
-            asset_content_type: application/zip
+      - name: Upload Realese Asset
+        id: u;oad_release_asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./lr1.zip
+          asset_name: lr1.zip
+          asset_content_type: application/zip
             
           
